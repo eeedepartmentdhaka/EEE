@@ -1,0 +1,719 @@
+/* ===== General Styles ===== */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+  color: #fff;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Overlay for better readability */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.25);
+  z-index: -1;
+}
+
+/* ===== Header Styles ===== */
+header {
+  text-align: center;
+  padding: 60px 20px;
+  background: rgba(0,0,0,0.4);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+.header-content h1 {
+  font-size: 3.5rem;
+  margin: 0;
+  color: #ffd700;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+}
+
+.header-content p {
+  font-size: 1.5rem;
+  margin: 10px 0 30px;
+  font-style: italic;
+  color: #ffeb3b;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+}
+
+/* ===== Navigation ===== */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 30px;
+  background: rgba(255,255,255,0.2);
+  transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+  background: #ff4e88;
+  transform: scale(1.1);
+  color: #fff;
+}
+
+/* ===== Hero Section ===== */
+.hero-section {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.hero-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #fff;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+}
+
+.featured-meme {
+  display: inline-block;
+  position: relative;
+}
+
+.featured-meme img {
+  width: 80%;
+  max-width: 600px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.featured-meme img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.7);
+}
+
+.featured-meme p {
+  margin-top: 15px;
+  font-size: 1.2rem;
+  color: #ffd700;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.6);
+}
+
+/* ===== About Section ===== */
+#about {
+  background: rgba(255, 255, 255, 0.15);
+  max-width: 600px;
+  padding: 60px 20px;
+  border-radius: 20px;
+  text-align: center;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+#about h2 {
+  color: #ffd700;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+#about p {
+  font-size: 1.2rem;
+  color: #fff;
+  font-weight: 500;
+  line-height: 1.8;
+}
+
+/* ===== Comment Section (keep vibrant as-is) ===== */
+.comments-section {
+  padding: 3rem 1.5rem;
+  background: #fdf3f6;
+  max-width: 600px;
+  border-top: 3px solid #ff4e88;
+  margin: 0 auto;
+}
+
+.comments-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
+  padding: 2rem;
+}
+
+.comments-container h2 {
+  text-align: center;
+  color: #ff4e88;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+/* ===== Form Styling ===== */
+#commentForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#commentForm input,
+#commentForm textarea {
+  padding: 12px 15px;
+  border: 2px solid #ffb3c6;
+  border-radius: 10px;
+  font-size: 1rem;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+#commentForm input:focus,
+#commentForm textarea:focus {
+  border-color: #ff4e88;
+  box-shadow: 0px 0px 8px rgba(255, 78, 136, 0.4);
+}
+
+#commentForm button {
+  background: #ff4e88;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.2s;
+}
+
+#commentForm button:hover {
+  background: #ff1f66;
+  transform: translateY(-2px);
+}
+
+/* ===== Comment Display ===== */
+.comments-display {
+  margin-top: 2rem;
+}
+
+.comments-display h3 {
+  color: #1a4870;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.comment {
+  background: #f9f9ff;
+  border: 2px solid #e6e6fa;
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  transition: 0.3s ease;
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
+}
+
+.comment:hover {
+  background: #fff5f8;
+  transform: scale(1.01);
+}
+
+.comment h4 {
+  margin: 0;
+  color: #ff4e88;
+  font-weight: 600;
+}
+
+.comment p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  color: #333;
+}
+
+.timestamp {
+  font-size: 0.8rem;
+  color: #888;
+}
+
+/* ===== Fade-in animation ===== */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(-10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== Delete Button ===== */
+.delete-btn {
+  background: #ff4e88;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  float: right;
+  transition: 0.3s ease, transform 0.2s;
+}
+
+.delete-btn:hover {
+  background: #d9004c;
+  transform: scale(1.1);
+}
+
+/* ===== Contact Section ===== */
+.contact-us {
+  background-color: rgba(255,255,255,0.2);
+  padding: 30px;
+  border-radius: 15px;
+  width: 420px;
+  margin: 0 auto;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(5px);
+  font-weight: bold;
+  transition: transform 0.5s ease-in-out;
+}
+
+.contact-us:hover {
+  transform: scale(1.05);
+}
+
+.contact-us h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #ffd700;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 1rem;
+}
+
+.contact-item i {
+  font-size: 1.2rem;
+  color: #ffd700;
+}
+
+.contact-item p, .contact-item a {
+  margin: 0;
+  color: #fff;
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+  color: #ff4e88;
+}
+
+/* ===== Footer ===== */
+footer {
+  text-align: center;
+  padding: 20px 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #ffd700;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  box-shadow: 0px -4px 15px rgba(0, 0, 0, 0.3);
+}
+
+footer p {
+  margin: 0;
+  font-size: 1rem;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  header {
+    padding: 40px 20px;
+  }
+
+  .header-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .header-content p {
+    font-size: 1.2rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  nav ul li a {
+    padding: 10px 15px;
+    font-size: 1rem;
+  }
+
+  .featured-meme img {
+    width: 100%;
+  }
+
+  .comments-section, .contact-us {
+    width: 90%;
+    padding: 20px;
+  }
+}
+/* Add spacing between main sections */
+#about,
+.comments-section,
+.contact-us {
+  margin: 60px auto; /* 60px top & bottom spacing */
+  padding: 60px 20px; /* existing padding maintained */
+}
+
+/* Optional: slightly more space between Comment and Contact */
+.comments-section {
+  margin-bottom: 80px; /* extra spacing before Contact section */
+}
+
+/* ===== General Styles ===== */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background: linear-gradient(135deg, #fffaf0 0%, #fff3e8 100%);
+  color: #2e2e2e; /* deep charcoal */
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Overlay for better readability */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 250, 240, 0.2);
+  z-index: -1;
+}
+
+/* ===== Header Styles ===== */
+header {
+  text-align: center;
+  padding: 60px 20px;
+  background: rgba(255, 250, 240, 0.8);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.header-content h1 {
+  font-size: 3.5rem;
+  margin: 0;
+  color: #f5c26b; /* soft gold */
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.15);
+}
+
+.header-content p {
+  font-size: 1.5rem;
+  margin: 10px 0 30px;
+  font-style: italic;
+  color: #ff9f80; /* peach/coral */
+}
+
+/* ===== Navigation ===== */
+nav ul li a {
+  text-decoration: none;
+  color: #2e2e2e; /* deep charcoal */
+  background: rgba(255, 250, 240, 0.6);
+}
+
+nav ul li a:hover {
+  background: #f5c26b; /* soft gold hover */
+  color: #fff;
+}
+
+/* ===== Hero Section ===== */
+.hero-section h2 {
+  color: #2e2e2e;
+}
+
+.featured-meme p {
+  color: #f5c26b;
+}
+
+/* ===== About Section ===== */
+#about {
+  background: rgba(255, 250, 240, 0.85); /* cream */
+}
+
+#about h2 {
+  color: #f5c26b; /* soft gold */
+}
+
+#about p {
+  color: #2e2e2e; /* deep charcoal */
+}
+
+/* ===== Comment Section ===== */
+.comments-section {
+  background: #fffaf0; /* cream */
+  border-top: 3px solid #ff9f80; /* peach/coral */
+}
+
+.comments-container h2 {
+  color: #ff9f80; /* peach/coral */
+}
+
+#commentForm input,
+#commentForm textarea {
+  border: 2px solid #f5c26b; /* soft gold */
+}
+
+#commentForm input:focus,
+#commentForm textarea:focus {
+  border-color: #ff9f80; /* peach/coral */
+}
+
+#commentForm button {
+  background: #ff9f80;
+}
+
+#commentForm button:hover {
+  background: #ff7a5a;
+}
+
+.comment h4 {
+  color: #ff9f80;
+}
+
+.comment p {
+  color: #2e2e2e;
+}
+
+.delete-btn {
+  background: #ff9f80;
+}
+
+.delete-btn:hover {
+  background: #e6735a;
+}
+
+/* ===== Contact Section ===== */
+.contact-us {
+  background-color: rgba(255, 250, 240, 0.85); /* cream */
+}
+
+.contact-us h2 {
+  color: #f5c26b; /* soft gold */
+}
+
+.contact-item i {
+  color: #ff9f80; /* peach/coral */
+}
+
+.contact-item a:hover {
+  color: #f5c26b;
+}
+
+/* ===== Footer ===== */
+footer {
+  background-color: #2e2e2e; /* deep charcoal */
+  color: #f5c26b; /* soft gold */
+}
+/* ===== Hero Section ===== */
+.hero-section {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #fffaf0 0%, #f5c26b 50%, #ff9f80 100%);
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.hero-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #2e2e2e; /* deep charcoal for contrast */
+  text-shadow: 1px 1px 5px rgba(255,255,255,0.6);
+}
+
+/* ===== About Section ===== */
+#about {
+  background: linear-gradient(135deg, rgba(255, 250, 240, 0.9) 0%, rgba(245, 194, 107, 0.85) 50%, rgba(255, 159, 128, 0.85) 100%);
+  padding: 60px 20px;
+  border-radius: 20px;
+  text-align: center;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+#about h2 {
+  color: #f5c26b; /* soft gold */
+}
+
+#about p {
+  color: #2e2e2e; /* deep charcoal */
+}
+
+
+/* ===== Decorative Borders for Sections ===== */
+
+/* পুরো body চারপাশে গোল্ডেন গ্রেডিয়েন্ট বর্ডার */
+body {
+  border: 20px solid transparent;
+  border-image: linear-gradient(135deg, #b8860b, #f5c26b, #ffd700, #f5c26b, #b8860b);
+  border-image-slice: 1;
+  box-sizing: border-box;
+}
+
+/* Header border */
+header {
+  border: 4px double #f5c26b;
+  border-radius: 16px;
+}
+
+/* Hero Section border */
+.hero-section {
+  border: 4px solid #f5c26b;
+  border-radius: 20px;
+}
+
+/* About Section border */
+#about {
+  border: 4px groove #f5c26b;
+  border-radius: 20px;
+}
+
+/* Comment Section border */
+.comments-section {
+  border: 5px double #ff9f80;
+  border-radius: 20px;
+}
+
+/* Contact Us Section border */
+.contact-us {
+  border: 4px ridge #f5c26b;
+  border-radius: 15px;
+}
+
+/* Footer border */
+footer {
+  border-top: 6px double #f5c26b;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+}
+
+
+/* ===== Hover Effects for Decorative Borders ===== */
+
+header:hover {
+  border-color: #ffd700;
+  box-shadow: 0 0 20px rgba(245, 194, 107, 0.8);
+  transition: all 0.3s ease;
+}
+
+.hero-section:hover {
+  border-color: #ffd700;
+  box-shadow: 0 0 20px rgba(255, 223, 0, 0.7);
+  transition: all 0.3s ease;
+}
+
+#about:hover {
+  border-color: #ffd700;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.75);
+  transition: all 0.3s ease;
+}
+
+.comments-section:hover {
+  border-color: #ff7043;
+  box-shadow: 0 0 20px rgba(255, 127, 80, 0.75);
+  transition: all 0.3s ease;
+}
+
+.contact-us:hover {
+  border-color: #ffd700;
+  box-shadow: 0 0 20px rgba(245, 194, 107, 0.8);
+  transition: all 0.3s ease;
+}
+
+footer:hover {
+  border-top-color: #ffd700;
+  box-shadow: inset 0 0 20px rgba(184, 134, 11, 0.7);
+  transition: all 0.3s ease;
+}
+
+
+/* Title + Logo inline */
+.title-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* h1 আর logo কে মাঝখানে রাখবে */
+  gap: 15px; /* লেখার সাথে logo এর মাঝে ফাঁকা */
+}
+
+.logo {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  
+}
+
+
+/* ===== Logo Modal ===== */
+.modal {
+  display: none; /* লুকানো থাকবে */
+  position: fixed;
+  z-index: 9999;
+  padding-top: 80px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.85); /* কালো overlay */
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 80%;
+  max-height: 80%;
+  border-radius: 12px;
+  box-shadow: 0 0 25px rgba(255,255,255,0.7);
+  animation: zoomIn 0.4s ease;
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.5); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.close {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.close:hover {
+  color: #ff4e88;
+}

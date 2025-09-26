@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Meme Gallery - EEE</title>
+  <link rel="stylesheet" href="gallery.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>🔥 Meme Gallery 🔥</h1>
+    <p>EEE-Emotions & Emotional Entertainment</p>
+  </header>
+
+  <!-- Main Gallery -->
+  <main>
+    <div id="gallery" class="gallery-container">
+      <!-- skeleton loaders while fetching -->
+      <div class="skeleton"></div>
+      <div class="skeleton"></div>
+      <div class="skeleton"></div>
+    </div>
+  </main>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+    <span id="lb-close" class="lb-btn lb-close">&times;</span>
+    <span id="lb-prev" class="lb-btn lb-prev">&#10094;</span>
+    <img id="lb-image" src="" alt="Meme full view">
+    <span id="lb-next" class="lb-btn lb-next">&#10095;</span>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 <span>EEE - Emotions & Emotional Entertainment</span></p>
+  </footer>
+
+  <!-- JS -->
+  <script src="gallery.js"></script>
+</body>
+</html>

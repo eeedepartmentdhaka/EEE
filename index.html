@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Department of EEE - Emotions and Emotional Entertainment</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body class="page-inner">
+  
+  <!-- Header Section -->
+  <header>
+    <div class="header-content">
+      <div class="title-logo">
+      <h1>Department of EEE</h1>
+      <img src="logo.jpg" alt="EEE Logo" class="logo">
+    </div>
+      <p>Emotions and Emotional Entertainment</p>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="gallery.html">Memes Gallery</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#submit">Submit Your Comment</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+  <!-- Hero Section (Meme of the Day) -->
+  <section id="home" class="hero-section">
+    <div class="hero-content">
+      <h2>Meme of the Day</h2>
+      <div class="featured-meme">
+        <img src="images/meme1.jpg" alt="Meme of the Day">
+        <p>!!!!</p>
+      </div>
+    </div>
+  </section>
+  
+  
+ 
+
+  <!-- About Us Section -->
+  <section style="background-color:rgba(248, 237, 237, 0.8);" id="about">
+    <div class="section-content">
+      <h2 style="color:#1A4870; font-size: 2rem; font-weight: bold;">About Us</h2>
+      <p style="font-size: 1.2rem; color: #FF4E88; font-weight: bold;">EEE - Emotions and Emotional Entertainment is your go-to source for relatable and hilarious memes! We celebrate the highs and lows of life, bringing humor to everyday struggles and emotions. From light-hearted moments to deep feelings, our content resonates with everyone looking for a good laugh or a moment of reflection. We believe that laughter is the best therapy, and our memes aim to brighten your day. Join us on this emotional rollercoaster, where every post is designed to entertain and uplift. Follow us for daily doses of humor, emotions, and everything in between!</p>
+    </div>
+  </section>
+  
+ 
+  <!-- Comment Section -->
+  <section id="submit" class="comments-section">
+    <div class="comments-container">
+      <h2>Leave a Comment</h2>
+      <form id="commentForm">
+        <input type="text" id="username" name="username" placeholder="Your Name" required>
+        <textarea id="comment" name="comment" rows="4" placeholder="Your Comment" required></textarea>
+        <button type="submit">Post Comment</button>
+      </form>
+
+      <!-- Comments Display -->
+      <div class="comments-display">
+        <h3>Recent Comments</h3>
+        <div id="commentsList">
+          <!-- Comments will be dynamically added here -->
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Contact Us Section -->
+  <section id="contact" class="contact-us">
+    <div class="contact-container">
+      <h2 style="font-weight: bold;">Contact Us</h2>
+      <div style="color: black;" class="contact-info">
+        <div class="contact-item">
+          <i style="color: blue;" class="fas fa-envelope">
+          </i>
+          <p style="color: orangered; font-size: 1.5rem;">eeedepartmentdhaka@gmail.com</p>
+        </div>
+        <div class="contact-item">
+          <i style="color: blue;" class="fas fa-map-marker-alt"></i>
+          <p style="color: orangered; font-size: 1.5rem;">Road 69, House no 69, EEE Department, Dhaka, Bangladesh</p>
+        </div>
+        <div class="contact-item">
+          <i style="color: blue;" class="fab fa-facebook"></i>
+          <a style="font-size: 1.5rem; color: orangered; font-weight: bolder;" href="https://www.facebook.com/profile.php?id=61560344766800&mibextid=ZbWKwL" target="_blank">
+            Visit our Facebook
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Logo Modal -->
+<div id="logoModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="logoImg">
+</div>
+
+  
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Department of EEE - Emotions and Emotional Entertainment. All rights reserved.</p>
+  </footer>
+  
+  <script src="script.js"></script>
+</body>
+</html>
